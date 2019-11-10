@@ -9,6 +9,7 @@ public class GuessingGame {
     private static final String YOU_GUESSED_IT = "You guessed it";
     private static final String TOO_LOW = "Too low";
     private static final String TOO_HIGH = "Too high";
+    private static final String ERROR = "\nError.";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -22,7 +23,7 @@ public class GuessingGame {
             try {
                 number = in.nextInt();
             } catch (Exception e) {
-                System.out.println(e + "\nError.");
+                System.out.println(e + ERROR);
                 break;
             }
             if (number == randomNumber) {
